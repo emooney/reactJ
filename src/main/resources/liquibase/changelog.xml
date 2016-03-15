@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="items table" author="Evgeniy">
+        <createTable tableName="items">
+            <column type="VARCHAR(36)" name="id">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column type="VARCHAR(20)" name="name"/>
+            <column type="VARCHAR(100)" name="description"/>
+            <column type="TIMESTAMP" name="created"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
